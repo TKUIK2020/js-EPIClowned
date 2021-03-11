@@ -1,6 +1,6 @@
 const http = require("http");
 const fs = require("fs");
-http.createServer(function (request, response)) {
+http.createServer(function (request, response) {
   console.log('Запрошенный адрес: ${request.url}');
   if (request.url.startsWith("/public/")) {
     const filePath = request.url.substr(1);
@@ -11,7 +11,7 @@ http.createServer(function (request, response)) {
       } else {
         response.setHeader("Content Type")
       }
-    }
+    })
   }
-}
-
+})
+  
